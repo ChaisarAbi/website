@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Anak TK & SD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo1.jpg" alt="Logo Les Anak">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#contact">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <h1>Les Anak TK & SD, Belajar Sambil Bermain!</h1>
+        <p>Bantu anak mencapai potensi terbaiknya dengan metode belajar yang interaktif dan menyenangkan.</p>
+        <a href="#program" class="cta-button">Daftar Sekarang</a>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="program-section">
+        <h2>Program Kami</h2>
+        <div class="program-card">
+            <img src="angka1.jpg" alt="Matematika Ceria">
+            <h3>Matematika Ceria</h3>
+            <p>Membantu anak menguasai dasar-dasar matematika dengan cara yang asyik.</p>
+        </div>
+        <div class="program-card">
+            <img src="huruf1.jpg" alt="Bahasa Indonesia Fun">
+            <h3>Bahasa Indonesia Fun</h3>
+            <p>Melatih kemampuan bahasa dengan cerita dan permainan.</p>
+        </div>
+        <div class="program-card">
+            <img src="warna1.jpg" alt="Belajar Mewarnai Seru">
+            <h3>Belajar Mewarnai Seru</h3>
+            <p>Mewarnai untuk melatih motorik anak-anak.</p>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz-section">
+        <h2>Kuiz Mini: Belajar Sambil Bermain!</h2>
+        <div class="quiz-container" id="quiz-container">
+            <div class="quiz-item" id="quiz-1">
+                <img src="langit.jpeg" alt="Sky Icon">
+                <p>Apa warna langit di siang hari?</p>
+                <button onclick="checkAnswer(1, 'blue')">Biru</button>
+                <button onclick="checkAnswer(1, 'red')">Merah</button>
+            </div>
+            <div class="quiz-item" id="quiz-2" style="display:none;">
+                <img src="apel.jpeg" alt="Apple Icon">
+                <p>Apa warna buah apel?</p>
+                <button onclick="checkAnswer(2, 'red')">Merah</button>
+                <button onclick="checkAnswer(2, 'green')">Hijau</button>
+            </div>
+            <div class="quiz-item" id="quiz-3" style="display:none;">
+                <img src="matahari.png" alt="Sun Icon">
+                <p>Apa warna matahari?</p>
+                <button onclick="checkAnswer(3, 'yellow')">Kuning</button>
+                <button onclick="checkAnswer(3, 'orange')">Oranye</button>
+            </div>
+            <div class="quiz-item" id="quiz-4" style="display:none;">
+                <img src="daun.png" alt="Leaf Icon">
+                <p>Apa warna daun?</p>
+                <button onclick="checkAnswer(4, 'green')">Hijau</button>
+                <button onclick="checkAnswer(4, 'brown')">Cokelat</button>
+            </div>
+            <div class="quiz-item" id="quiz-5" style="display:none;">
+                <img src="air.jpeg" alt="Water Icon">
+                <p>Apa warna air laut?</p>
+                <button onclick="checkAnswer(5, 'blue')">Biru</button>
+                <button onclick="checkAnswer(5, 'green')">Hijau</button>
+            </div>
+        </div>
+        <p id="quiz-result"></p>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="testimoni-section">
+        <h2>Apa Kata Wali Murid?</h2>
+        <div class="testimoni-slider" id="testimoni-slider">
+            <div class="testimoni-card">
+                <p>"Anak saya sekarang lebih percaya diri dalam belajar!"</p>
+                <p>- Bunda Ayu</p>
+            </div>
+            <div class="testimoni-card">
+                <p>"Kelas ini sangat menyenangkan dan interaktif!"</p>
+                <p>- Ayah Budi</p>
+            </div>
+            <div class="testimoni-card">
+                <p>"Teman temannya asik kata anak saya."</p>
+                <p>- Ibu Joko</p>
+            </div>
+            <div class="testimoni-card"></div>
+                <p>"Ruangan kelas sejuk!"</p>
+                <p>- Ibu Ai</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Section -->
+    <section id="galeri" class="galeri-section">
+        <h2>Galeri Kegiatan</h2>
+        <div class="galeri-slider" id="galeri-slider">
+            <img src="foto1.jpg" alt="Kegiatan 1">
+            <img src="foto2.jpg" alt="Kegiatan 2">
+            <img src="foto3.jpg" alt="Kegiatan 3">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Hubungi Kami: 0812-3456-7890 | email@example.com</p>
+            <p>Lokasi: <a href="https://www.google.com/maps/place/Ecalistung/@-6.2988596,106.7382782,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f15e87ac9fbb:0x55d17a2343b315e4!8m2!3d-6.2988649!4d106.7408531!16s%2Fg%2F11hf6jbr0j?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D">Lihat di Google Maps</a></p>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
