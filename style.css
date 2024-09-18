@@ -14,13 +14,14 @@ body {
     padding: 10px;
 }
 
-.header img {
-    width: 50px; /* Sesuaikan ukuran logo */
-    margin-right: 10px;
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 20px; /* Give space between logo and menu */
 }
 
 .header h1 {
-    color: white;
+    color: blue;
     font-size: 24px; /* Sesuaikan ukuran font */
 }
 
@@ -75,7 +76,7 @@ nav ul li a {
 
 /* Program Section */
 .program-section {
-    padding: 50px;
+    padding: 100px;
     background-color: #f7f7f7;
     text-align: center;
 }
@@ -83,7 +84,7 @@ nav ul li a {
 .program-section .program-card {
     display: inline-block;
     width: 100%; /* Make it full width on mobile */
-    max-width: 300px; /* Set max width to avoid being too wide */
+    max-width: 700px; /* Set max width to avoid being too wide */
     margin: 20px auto; /* Center each card */
     padding: 20px;
     background-color: white;
@@ -93,7 +94,7 @@ nav ul li a {
 
 @media (min-width: 768px) {
     .program-section .program-card {
-        width: 90%; /* On larger screens, show cards in a row */
+        width: 100%; /* On larger screens, show cards in a row */
         margin: 20px;
     }
 }
