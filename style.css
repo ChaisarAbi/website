@@ -3,26 +3,39 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Biru pastel */
+    background-color: #50D890; /* Biru pastel */
     color: #333;
 }
 
-header {
+.header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Atur vertikal */
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
     padding: 20px;
-    background-color: #5cb85c; /* Hijau ceria */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Jarak antara logo dan nama usaha */
 }
 
 .logo img {
-    width: 50px; /* Sesuaikan dengan kebutuhan Anda */
-    height: auto; /* Agar proporsinya tetap terjaga */
+    width: 100px !important; /* Sesuaikan ukuran logo dan tambahkan !important untuk memaksa perubahan */
+    height: auto !important; /* Pastikan proporsinya tetap */
+    display: block; /* Tambahkan ini untuk memastikan tidak ada perilaku inline yang tidak diinginkan */
+    max-width: 100%; /* Agar gambar tidak lebih besar dari kontainer */
 }
-.hero-section img {
-    width : 20%;
-    height : 20%;
+
+.hero-section  h1 {
+    font-size: 6vh;
+    color : white
 }
+
 .program-section img {
     width : 100px;
     height : 100px;
@@ -32,67 +45,44 @@ header {
     width : 100px;
     height : 100px;
 }
-nav ul {
-    display: flex;
-    list-style-type: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
 
 .hero-section {
     text-align: center;
     padding: 50px;
-    background-color: #dff0d8; /* Hijau terang */
-    position: relative;
+    background-color: #50D890; /* Hijau terang */
 }
 
-.hero-section .cta-button {
-    padding: 15px 30px;
-    background-color: #f0ad4e; /* Oranye */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.hero-section .cta-button:hover {
-    background-color: #f7c860;
-}
-
-.hero-section .hero-image {
-    margin-top: 20px;
-    max-width: 100%;
-}
 
 /* Program Section */
 .program-section {
-    padding: 50px;
-    background-color: #f7f7f7;
+    padding: 100px;
+    background-color: #F7F7F7;
     text-align: center;
 }
 
 .program-section .program-card {
     display: inline-block;
-    width: 30%;
-    margin: 20px;
+    width: 100%; /* Make it full width on mobile */
+    max-width: 700px; /* Set max width to avoid being too wide */
+    margin: 20px auto; /* Center each card */
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+    .program-section .program-card {
+        width: 100%; /* On larger screens, show cards in a row */
+        margin: 20px;
+    }
+}
+
+
 /* Quiz Section */
 .quiz-section {
-    padding: 50px;
-    background-color: #dff0d8; /* Hijau cerah */
+    padding: 30px;
+    background-color: #50D890; /* Hijau cerah */
     text-align: center;
 }
 
@@ -100,59 +90,68 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px; /* Limit width to avoid too wide elements on large screens */
+    margin: 0 auto; /* Center the quiz container */
 }
 
 .quiz-item {
     background-color: white;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0; /* Space between quiz items */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Limit the width to keep it compact on larger screens */
     text-align: center;
 }
 
 .quiz-item button {
-    background-color: #f0ad4e;
+    background-color: #0457b6;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
+    margin: 10px 5px; /* Space between buttons */
 }
 
 .quiz-item button:hover {
-    background-color: #f7c860;
+    background-color: #10ee35;
 }
 
-/* Testimoni Section */
-.testimoni-section {
-    padding: 50px;
-    background-color: #dff0d8;
-    text-align: center;
+.quiz-item img {
+    max-width: 150px;
+    width: 150px; /* Set a max width for the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
 }
 
-.testimoni-slider {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+/* Responsive Design for Quiz Section */
+@media (max-width: 768px) {
+    .quiz-item {
+        max-width: 100%; /* Take full width on smaller screens */
+    }
 }
 
-.testimoni-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    flex-shrink: 0;
-    transition: transform 0.5s ease;
+@media (max-width: 480px) {
+    .quiz-item {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    .quiz-item button {
+        padding: 8px 16px; /* Adjust button size for smaller screens */
+        font-size: 14px;
+    }
+
+    .quiz-item img {
+        max-width: 80px; /* Slightly smaller images on mobile */
+    }
 }
 
 /* Galeri Section */
 .galeri-section {
     padding: 50px;
-    background-color: #f7f7f7;
+    background-color: #50D890;
     text-align: center;
 }
 
@@ -172,7 +171,81 @@ nav ul li a {
 /* Footer */
 footer {
     padding: 20px;
-    background-color: #5cb85c;
+    background-color: #5ec59e;
     text-align: center;
     color: white;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .program-section .program-card {
+        width: 100%; /* Stack program cards vertically on mobile */
+        margin: 10px 0;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .hero-section .cta-button {
+        padding: 10px 20px;
+    }
+
+    .testimoni-slider {
+        flex-direction: column;
+    }
+
+    .galeri-slider {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+}
+
+/* Responsive for Extra Small Screens (Mobile) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 15px;
+    }
+
+    .program-section {
+        padding: 20px;
+    }
+
+    .program-section .program-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .quiz-container, .quiz-item {
+        width: 100%;
+    }
+
+    .testimoni-slider, .galeri-slider {
+        width: 100%;
+    }
 }

@@ -14,12 +14,12 @@ function showNextSlide(slides, currentIndex) {
 setInterval(() => {
     currentSlideTestimoni = (currentSlideTestimoni + 1) % testimoniSlides.length;
     showNextSlide(testimoniSlides, currentSlideTestimoni);
-}, 5000);
+}, 3000);
 
 setInterval(() => {
     currentSlideGaleri = (currentSlideGaleri + 1) % galeriSlides.length;
     showNextSlide(galeriSlides, currentSlideGaleri);
-}, 4000);
+}, 3000);
 
 function checkAnswer(quizNumber, answer) {
     const correctAnswers = {
