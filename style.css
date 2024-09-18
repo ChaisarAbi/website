@@ -6,27 +6,24 @@ body {
     background-color: #f0f8ff; /* Biru pastel */
     color: #333;
 }
-header {
+.header {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #5cb85c;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-direction: column; /* Stack logo and text vertically */
+    justify-content: center;
+    background-color: #4CAF50; /* Sesuaikan warna latar belakang */
+    padding: 10px;
 }
 
-.logo img {
-    width: 80px; /* Sesuaikan ukuran logo */
-    height: auto;
-    margin-bottom: 10px; /* Jarak antara logo dan nama usaha */
+.header img {
+    width: 50px; /* Sesuaikan ukuran logo */
+    margin-right: 10px;
 }
 
-header h1 {
+.header h1 {
     color: white;
-    font-size: 24px; /* Ukuran teks nama usaha */
-    margin: 0;
+    font-size: 24px; /* Sesuaikan ukuran font */
 }
+
 
 .hero-section img {
     width : 20%;
@@ -96,7 +93,7 @@ nav ul li a {
 
 @media (min-width: 768px) {
     .program-section .program-card {
-        width: 30%; /* On larger screens, show cards in a row */
+        width: 90%; /* On larger screens, show cards in a row */
         margin: 20px;
     }
 }
