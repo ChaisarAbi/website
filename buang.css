@@ -1,0 +1,33 @@
+
+/* Testimoni Section */
+/* Testimoni Section */
+.testimoni-section {
+    padding: 50px;
+    background-color: #dff0d8;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimoni-slider {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; /* Snap ke item saat swipe */
+    gap: 10px; /* Jarak antar testimoni */
+}
+
+.testimoni-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Lebar card testimoni */
+    flex-shrink: 0;
+    scroll-snap-align: start; /* Memastikan testimoni berhenti di awal saat swipe */
+    transition: transform 0.5s ease;
+}
+
+/* Remove automatic sliding */
+.testimoni-card:hover {
+    transform: none; /* Menonaktifkan transform saat hover */
+}
